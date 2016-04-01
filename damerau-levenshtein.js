@@ -72,7 +72,7 @@ function run(source, target, w, s, a, d) {
     const SL1 = SL + 1;
     const TL1 = TL + 1;
 
-    var tmp, jp1, jm1;
+    var tmp, im1, jp1, jm1;
     var row0 = new Array(TL1);
     var row1 = new Array(TL1);
     var row2 = new Array(TL1);
@@ -81,6 +81,7 @@ function run(source, target, w, s, a, d) {
         row1[i] = i * a;
     }
     for (let i = 0; i < SL; i++) {
+        im1 = 0;
         row2[0] = (i + 1) * d;
         for (let j = 0; j < TL; j++) {
             jm1 = j - 1;
@@ -88,9 +89,9 @@ function run(source, target, w, s, a, d) {
             // Substitution
             row2[jp1] = row1[j] + s * (source[i] !== target[i]);
             // Swap
-            if (i > 0 && j > 0 && source[i - 1] == target[j]   &&
-                                  source[i]     == target[jm1] &&
-                                  row2[jp1]     >  row0[jm1] + w) {
+            if (i > 0 && j > 0 && source[im1] == target[j]   &&
+                                  source[i]   == target[jm1] &&
+                                  row2[jp1]   >  row0[jm1] + w) {
                 row2[jp1] = row0[jm1] + w;
             }
             // Deletion

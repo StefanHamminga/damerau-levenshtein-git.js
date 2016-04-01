@@ -1,6 +1,6 @@
 {
   "name": "damerau-levenshtein-git",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "JavaScript port of the fast Damerau-Levenshtein string distance calculation algorithm used in Git",
   "main": "damerau-levenshtein.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/StefanHamminga/damerau-levenshtein-git.js.git"
+    "url": "https://github.com/StefanHamminga/damerau-levenshtein-git.js.git"
   },
   "keywords": [
     "Damerau-Levenshtein",
